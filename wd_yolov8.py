@@ -105,7 +105,7 @@ for main_subdir in os.listdir(input_dir):
 
 print('Dataset preparation complete!')
 
-!pip install ultralytics==8.0.20
+pip install ultralytics==8.0.20
 
 from IPython import display
 display.clear_output()
@@ -116,7 +116,7 @@ ultralytics.checks()
 # Commented out IPython magic to ensure Python compatibility.
 from ultralytics import YOLO
 # %cd /content/drive/MyDrive/wound_detection/wdd_temp
-!yolo task=detect mode=train model=yolov8s.pt data= /content/drive/MyDrive/wound_detection/data.yaml epochs=25 imgsz=224 plots=True
+yolo task=detect mode=train model=yolov8s.pt data= /content/drive/MyDrive/wound_detection/data.yaml epochs=25 imgsz=224 plots=True
 
 # !yolo task=detect mode=predict model=/content/drive/MyDrive/wound_detection/wdd_temp/runs/detect/train/weights/best.pt conf=0.25 source=/content/drive/MyDrive/wound_detection/wdd_temp/prepared_data/test/images save=True
 
